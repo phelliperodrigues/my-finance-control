@@ -1,0 +1,19 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: my-finance-control
+  datasource:
+    url: ${DATA_SOURCE_URL}
+    username: ${DATA_SOURCE_DB_USER}
+    password: ${DATA_SOURCE_DB_PASSWORD}
+    driverClassName: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+      path: /h2
+      settings:
+        trace: false
+        web-allow-others: false
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
